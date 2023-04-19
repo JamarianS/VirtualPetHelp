@@ -1,4 +1,4 @@
-
+package PetAssignment;
 public interface PetActions {
     void feed();
 

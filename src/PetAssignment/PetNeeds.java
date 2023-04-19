@@ -1,3 +1,5 @@
+package PetAssignment;
+
 public class PetNeeds {
     private int hunger;
     private int thirst;

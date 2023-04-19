@@ -1,3 +1,4 @@
+package PetAssignment;
 
 public class VirtualPet {
 
@@ -28,28 +29,28 @@ public class VirtualPet {
         petneeds.increaseHappiness(increaseAmount);
     }
 
-    public void isSick(){
-        if(petneeds.getHunger() >= 100 || petneeds.getThirst() >= 100){
-            System.out.println(true);
+    public boolean isSick(){
+        return petneeds.getHunger() >= 100 || petneeds.getThirst() >= 100 ;
         }
-    }
 
-    public void isSad(){
-        if(petneeds.getHappiness() <= 0){
-            System.out.println(true);
+
+    public boolean isSad(){
+        return petneeds.getHappiness() <= 0;
+
         }
-    }
+
 
     public void printStatus(){
         System.out.println(name);
         System.out.println(age);
-        System.out.println(petneeds.getHunger());
-        System.out.println(petneeds.getThirst());
-        System.out.println(petneeds.getHappiness());
+        System.out.println("Hunger: " + petneeds.getHunger() + "/100");
+        System.out.println("Thirst: " + petneeds.getThirst() + "/100");
+        System.out.println("Happiness: " + petneeds.getHappiness() + "/100");
+        System.out.println();
     }
 
     public int getRandomNumber(int min, int max){
-        return(int)(Math.random() * (max - min + 1));
+        return(int)(Math.random() * (max - min + 1)  + min);
     }
 
     public String getName(){
@@ -64,7 +65,6 @@ public class VirtualPet {
       return petneeds;
     }
 
-    VirtualPet pet = new VirtualPet();
 
 
 }
